@@ -1,0 +1,21 @@
+/* Global Fonts */
+@font-face {
+    font-family: Pretendard_B;
+    src: url('./Pretendard-Bold.woff');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Pretendard_M;
+    src: url('./Pretendard-Medium.woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Pretendard_R;
+    src: url('./Pretendard-Regular.woff');
+    font-style: normal;
+    font-weight: 400;
+}
