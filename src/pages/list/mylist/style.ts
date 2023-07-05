@@ -1,32 +1,28 @@
 import styled from "styled-components";
-import "../../asset/font/font.css";
+import "../../../asset/font/font.css";
 
 export const View = styled.div`
     width: 360px;
-    height: 536px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-export const HeaderContainer = styled.div`
-    width: 100%;
-    height: 129px;
+    height: 407px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 
-export const Title = styled.div`
-    width: 320px;
-    height: 36px;
-    padding-left: 10px;
-    font-family: "Pretendard_M";
+export const HeaderContainer = styled.div`
+    width: 328px;
+    height: 49px;
+`;
+
+export const HeaderTitle = styled.div`
+    width: auto;
+    height: auto;
+    margin: 10px;
+    font-family: "Pretendard_SB";
     font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 24px;
 `;
 
 export const ListContainer = styled.div`
@@ -35,8 +31,9 @@ export const ListContainer = styled.div`
     background-color: #F5F6F6;
     border-radius: 20px;
     margin-top: 10px;
+    margin-bottom: 12px;
     &:first-child{
-        margin-top: 0;
+        margin-top: 12px;
     }
 `;
 
@@ -73,17 +70,6 @@ export const ListDate = styled.div`
     font-weight: 400;
     font-size: 12px;
     color: #BCBCBC;
-`;
-
-export const AddBtn = styled.div`
-    width: 68px;
-    height: 68px;
-    margin-right: 21px;
-    margin-bottom: 19px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
 `;
 
 export const MenuImg = styled.img`

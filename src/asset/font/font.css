@@ -19,3 +19,10 @@
     font-style: normal;
     font-weight: 400;
 }
+
+@font-face {
+    font-family: Pretendard_SB;
+    src: url('./Pretendard-SemiBold.woff');
+    font-style: normal;
+    font-weight: bold;
+}

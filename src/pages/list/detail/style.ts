@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import "../../asset/font/font.css";
 
 export const View = styled.div`
     width: 360px;
@@ -11,33 +10,34 @@ export const View = styled.div`
 
 export const HeaderContainer = styled.div`
     width: 100%;
-    height: 129px;
+    height: 44px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 
-export const Title = styled.div`
-    width: 320px;
-    height: 36px;
-    padding-left: 10px;
-    font-family: "Pretendard_M";
+export const BackImg = styled.img`
+    width: 28px;
+    height: 24px;
+    margin-left: 16px;
+`;
+
+export const HeaderTitle = styled.div`
+    font-family: "Pretendard_B";
     font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    margin-left: 110px;
+    margin-right: 154px;
 `;
 
 export const ListContainer = styled.div`
-    width: 90%;
+    width: 328px;
     height: auto;
     background-color: #F5F6F6;
     border-radius: 20px;
-    margin-top: 10px;
-    &:first-child{
-        margin-top: 0;
-    }
+    margin-top: 16px;
 `;
 
 export const ListTitle = styled.div`
@@ -67,7 +67,8 @@ export const ListContent = styled.div`
 
 export const ListDate = styled.div`
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-top: 6px;
+    margin-bottom: 6px;
     font-family: "Pretendard_M";
     font-style: normal;
     font-weight: 400;
@@ -75,15 +76,38 @@ export const ListDate = styled.div`
     color: #BCBCBC;
 `;
 
-export const AddBtn = styled.div`
-    width: 68px;
-    height: 68px;
-    margin-right: 21px;
-    margin-bottom: 19px;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
+export const Tag = styled.div`
+    width: 56px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6A5DFF;
+    border-radius: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+`;
+
+export const TagName = styled.div`
+    font-family: "Pretendard_M";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #6A5DFF;
+`;
+
+export const Content = styled.div`
+    width: 288px;
+    height: auto;
+    margin-top: 6px;
+    margin-left: 20px;
+    margin-bottom: 46px;
+    font-family: "Pretendard_R";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
 `;
 
 export const MenuImg = styled.img`
