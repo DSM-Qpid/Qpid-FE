@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const V = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
 export const View = styled.div`
     width: 360px;
     height: 536px;
@@ -9,6 +14,8 @@ export const View = styled.div`
 `;
 
 export const HeaderContainer = styled.div`
+    margin-top: 30px;
+    margin-bottom: 15px;
     width: 100%;
     height: 44px;
     display: flex;
@@ -53,6 +60,13 @@ export const ListTitle = styled.div`
     display: flex;
     justify-content: space-between;
 `;
+
+export const MenuDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 100;
+`
 
 export const ListContent = styled.div`
     margin-left: 20px;

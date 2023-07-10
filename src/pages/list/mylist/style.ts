@@ -2,23 +2,25 @@ import styled from "styled-components";
 import "../../../asset/font/font.css";
 
 export const View = styled.div`
-    width: 360px;
+    width: 100%;
     height: 407px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 `;
 
 export const HeaderContainer = styled.div`
-    width: 328px;
+    width: 100%;
     height: 49px;
+    display: flex;
+    justify-content: flex-start;
 `;
 
 export const HeaderTitle = styled.div`
     width: auto;
     height: auto;
-    margin: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
     font-family: "Pretendard_SB";
     font-style: normal;
     font-weight: bold;

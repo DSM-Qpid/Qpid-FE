@@ -2,20 +2,28 @@ import styled from "styled-components";
 import "../../asset/font/font.css";
 
 export const View = styled.div`
-    width: 360px;
+    width: 100%;
     height: 536px;
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
-export const HeaderContainer = styled.div`
+export const View2 = styled.div`
+    margin-top: 20px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const HeaderContainer = styled.div`
+    width: 90%;
     height: 129px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 `;
 
 export const Title = styled.div`
@@ -27,6 +35,7 @@ export const Title = styled.div`
     font-weight: 400;
     font-size: 30px;
     margin-bottom: 16px;
+    margin-top: 25px;
 `;
 
 export const ListContainer = styled.div`
@@ -55,6 +64,7 @@ export const ListTitle = styled.div`
 `;
 
 export const ListContent = styled.div`
+    width: 288px;
     margin-left: 20px;
     margin-top: 6px;
     margin-bottom: 6px;
@@ -63,6 +73,9 @@ export const ListContent = styled.div`
     font-weight: 400;
     font-size: 16px;
     color: #7A7A7A;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `;
 
 export const ListDate = styled.div`
@@ -80,14 +93,22 @@ export const AddBtn = styled.div`
     height: 68px;
     margin-right: 21px;
     margin-bottom: 19px;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 200;
 `;
+
+export const MenuDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    z-index: 100;
+`
 
 export const MenuImg = styled.img`
     width: 16px;
     height: 16px;
     margin-right: 20px;
+    z-index: 100;
 `;

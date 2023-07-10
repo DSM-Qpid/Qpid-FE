@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import axios from "axios";
 
 // Styles
 import * as S from "./style";
@@ -7,21 +8,42 @@ import * as S from "./style";
 import Menu from "../../../asset/image/Menu.png";
 
 function MyListPage(): React.ReactElement {
+    const [list, setList] = useState([]);
+    const [viewList, setViewList] = useState<any[]>([]);
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+    const fetchData = useCallback(async () => {
+        try {
+            const response = await axios.get("https://1ce7-119-203-74-86.ngrok-free.app/feeds/mine", {
+                headers: {
+                Authorization: `${localStorage.getItem("qpid-atk")}`,
+                },
+            });
+            setList(response.data.feed_list);
+        } catch (err) {
+            console.log(err);
+        }
+    }, []);
+
+    useEffect(() => {
+        setViewList(list.reverse());
+    }, [list]);
+
     return(
         <S.View>
             <S.HeaderContainer>
                 <S.HeaderTitle>내가 쓴 글</S.HeaderTitle>
             </S.HeaderContainer>
-            <S.ListContainer>
-                <S.ListTitle>키오스크 사용법 알려드립니다<S.MenuImg src={Menu} /></S.ListTitle>
-                <S.ListContent>이 편지는 영국에서 최초로 시작되어...</S.ListContent>
-                <S.ListDate>2023.07.04</S.ListDate>
-            </S.ListContainer>
-            <S.ListContainer>
-                <S.ListTitle>키오스크 사용법 알려드립니다<S.MenuImg src={Menu} /></S.ListTitle>
-                <S.ListContent>이 편지는 영국에서 최초로 시작되어...</S.ListContent>
-                <S.ListDate>2023.07.04</S.ListDate>
-            </S.ListContainer>
+            {viewList.map((data) => (
+                <S.ListContainer>
+                    <S.ListTitle>{data.title}</S.ListTitle>
+                    <S.ListContent>{data.content}</S.ListContent>
+                    <S.ListDate>{data.created_at}</S.ListDate>
+                </S.ListContainer>
+            ))}
         </S.View>
     );
 }
